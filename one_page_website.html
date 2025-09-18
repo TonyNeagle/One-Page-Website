@@ -5,6 +5,7 @@
 		<title>One Page Web Assignment</title>
 
 		<link rel = "stylesheet" type = "text/css" href = "./CSS/one_page_website.css">
+		<script src="JS/one_page_website.js"></script>
 </head>
 	
 <body>	
@@ -34,21 +35,80 @@
 
 
 			<!-- PHOTO/IMAGE SECTION USING IMAGES SAVED WITHIN SAME FOLDER UTILISING ALT TAG-->
-<div class="image-container">
+
 <h2 id="PH">PHOTOS</h2>
 <p>Pics of the Beatles </p>
-<img src="/Users/tonyneagle/Documents/GitHub/One-Page Website/Images/John_Lennon.png" alt="Picture John Lennon" width="280" height="200">
+<div class="row">
+	<div class="column">
+<img src="Images/John.png" alt="Picture John Lennon"
+	onclick="openModal();currentSlide(1)" class="hover-shadow">
 
-<img src="/Users/tonyneagle/Documents/GitHub/One-Page Website/Images/Paul_Mcartney.png" alt="Picture John Lennon" width="240" height="200">
+<img src="Images/Paul.png" alt="Picture John Lennon"
+	onclick="openModal();currentSlide(2)" class="hover-shadow">
 
-<img src="/Users/tonyneagle/Documents/GitHub/One-Page Website/Images/Geaorge_Harrison.png" alt="Picture John Lennon" width="240" height="200">
+<img src="Images/George.png" alt="Picture John Lennon"
+	onclick="openModal();currentSlide(3)" class="hover-shadow">
 
-<img src="/Users/tonyneagle/Documents/GitHub/One-Page Website/Images/Ringo_Star.png" alt="Picture John Lennon" width="260" height="200">
+<img src="Images/Ringo.png" alt="Picture John Lennon"
+	onclick="openModal();currentSlide(4)" class="hover-shadow">
+	</div>
+</div>
 
 <p><a href="#Home">HOME</a></p>
 
-</div>
 
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+  
+	  <div class="mySlides">
+		<div class="numbertext">1 / 4</div>
+		<img src="Images/John_copy.png" alt="John Lennon">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">2 / 4</div>
+		<img src="Images/Paul_copy.png" alt="Paul McCartney">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">3 / 4</div>
+		<img src="Images/George_copy.png" alt="George Harrison">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">4 / 4</div>
+		<img src="Images/Ringo_copy.png" alt="Ringo Starr">
+	  </div>
+ <!-- Next/previous controls -->
+ <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+ <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+ <!-- Caption text -->
+ <div class="caption-container">
+   <p id="caption"></p>
+ </div>
+
+ <!-- Thumbnail image controls -->
+ <div class="column">
+   <img class="demo" src="Images/John.png" onclick="currentSlide(1)" alt="John">
+ </div>
+
+ <div class="column">
+   <img class="demo" src="Images/Paul.png" onclick="currentSlide(2)" alt="Paul">
+ </div>
+
+ <div class="column">
+   <img class="demo" src="Images/George.png" onclick="currentSlide(3)" alt="George">
+ </div>
+
+ <div class="column">
+   <img class="demo" src="Images/Ringo.png" onclick="currentSlide(4)" alt="Ringo">
+ </div>
+</div>
+</div>
 
 
 			<!-- END OF PHOTO/IMAGE SECTION -->
@@ -68,10 +128,10 @@ John Lennon is arguably the greatest songwriter of his generation. As founder an
 <hr>
 
 <h2 id="BP">PAUL McCARTNEY</h2>
-<p>Here is a quote about Paul McCartney from the Britannica website</p>
+
 
 <blockquote cite="https://www.britannica.com/biography/Paul-McCartney">
-
+<p>Here is a quote about Paul McCartney from the Britannica website</p>
 Paul McCartney (born June 18, 1942, Liverpool, England) is a British vocalist, songwriter, composer, bass player, poet, and painter whose work with the Beatles in the 1960s helped lift popular music from its origins in the entertainment business and transform it into a creative, highly commercial art form. He is also one of the most popular solo performers of all time in terms of both sales of his recordings and attendance at his concerts.
 </blockquote>
 <p><a href="#Home">HOME</a></p>
@@ -79,9 +139,10 @@ Paul McCartney (born June 18, 1942, Liverpool, England) is a British vocalist, s
 <hr>
 
 <h2 id="BG">GEORGE HARRISON</h2>
-<p>Here is a quote about George Harrison from the Britannica website</p>
 
 <blockquote cite="https://www.britannica.com/biography/George-Harrison-British-musician">
+<p>Here is a quote about George Harrison from the Britannica website</p>
+
 George Harrison (born February 25, 1943, Liverpool, England—died November 29, 2001, Los Angeles, California, U.S.) was a British musician, singer, and songwriter, who gained fame as the lead guitarist of the Beatles, one of the most important and influential bands in the history of rock music. Harrison was the youngest of the “Fab Four” and was known as “the quiet Beatle.” He later achieved singular success as a songwriter and performer.
 </blockquote>
 
@@ -90,8 +151,9 @@ George Harrison (born February 25, 1943, Liverpool, England—died November 29, 
 <hr>
 
 <h2 id="BR">RINGO STARR</h2>
-<p>Here is a quote from the official Ringo Starr website</p>
+
 <blockquote cite="https://www.ringostarr.com/about/#/">
+<p>Here is a quote from the official Ringo Starr website</p>
 “Ultimately what’s most impressive about Ringo Starr isn’t what he’s been, but rather who he is,” wrote Rolling Stone rock critic David Wild. “The man’s great heart and soul, his wit and wisdom.” Indeed, his music has always emanated from his warmth, humor, and exceptional skill, manifesting in songs we know and love: With A Little Help From My Friends, Don’t Pass Me By, Octopus’ Garden, Photograph, It Don’t Come Easy, Back Off Boogaloo, You’re Sixteen (You’re Beautiful and You’re Mine), Don’t Go Where the Road Don’t Go, The No No Song, and Never Without You, to name a few. Since beginning his career with The Beatles in the 1960s, Ringo has been one of the world’s brightest musical luminaries. He has enjoyed a successful, dynamic solo career as a singer, songwriter, drummer, collaborator, and producer – releasing 18 solo studio albums to date. He is also an acclaimed actor appearing in over 15 films. Drawing inspiration from classic blues, soul, country, honky-tonk and rock ‘n’ roll, he continues to play an important recording, touring, and unofficial mentoring role in modern music.
 </blockquote>
 <p><a href="#Home">HOME</a></p>
